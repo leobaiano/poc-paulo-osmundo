@@ -1,0 +1,19 @@
+<section>
+  <h2>Pessoas</h2>
+  <div class="container-pessoas" *ngIf="pessoas">
+    <div
+      *ngFor="let pessoa of pessoas; let idPessoa = index"
+    >
+      <div *ngIf="pessoa.idade !== 36">
+        <p><strong>{{pessoa.nome}}</strong></p>
+        <p>{{pessoa.apelido}}</p>
+        <p>{{pessoa.idade}}</p>
+        <button
+          (click)="deletePessoa(idPessoa)"
+        >
+          Excluir
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
